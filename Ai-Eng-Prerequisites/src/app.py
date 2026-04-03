@@ -45,9 +45,9 @@ with st.sidebar:
     else:
         model_name = st.selectbox("Model", ["gemini-2.5-flash"])
 
-# 
-st.session_state.provider = provider
-st.session_state.model_name = model_name
+    #Save provider and model to session state  
+    st.session_state.provider = provider
+    st.session_state.model_name = model_name
 
 if "messages" not in st.session_state:
     st.session_state.messages = [{"role": "assistant", "content": "Hello! How can I assist you today?"}]

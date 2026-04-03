@@ -14,7 +14,7 @@ ENV PYTHONPATH="/app/src:$PYTHONPATH"
 COPY pyproject.toml uv.lock ./
 
 # Install dependencies
-RUN --mount=type=cache, target=/root/.cache/uv \
+RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --frozen --no-dev
 
 # Copy application code
